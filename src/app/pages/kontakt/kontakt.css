@@ -11,3 +11,9 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+.section-accent {
+  width: 60px;
+  height: 3px;
+  background-color: #ee4e01; /* H3 orange */
+}
+
