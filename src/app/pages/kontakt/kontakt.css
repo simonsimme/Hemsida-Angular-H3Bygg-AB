@@ -154,6 +154,7 @@ iframe {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(238, 78, 1, 0.1) 0%, rgba(236, 57, 0, 0.1) 100%);
+  pointer-events: none;
 }
 
 .text-white-90 {
