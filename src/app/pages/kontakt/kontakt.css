@@ -161,31 +161,6 @@ iframe {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Buttons */
-.btn-orange {
-  background-color: #ee4e01;
-  border-color: #ee4e01;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-orange:hover {
-  background-color: #ec3900;
-  border-color: #ec3900;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
-}
-
-.btn-orange:disabled {
-  background-color: #cccccc;
-  border-color: #cccccc;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
 /* Contact Form */
 .form-label {
   color: #212529;

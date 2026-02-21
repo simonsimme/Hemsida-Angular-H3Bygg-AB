@@ -96,26 +96,9 @@
   font-size: 0.9rem;
 }
 
-/* Buttons */
-.btn-orange {
-  background-color: #ee4e01;
-  border-color: #ee4e01;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-orange:hover {
-  background-color: #ec3900;
-  border-color: #ec3900;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
-}
-
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-light) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -123,10 +106,7 @@
 .cta-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(135deg, rgba(238, 78, 1, 0.1) 0%, rgba(236, 57, 0, 0.1) 100%);
   pointer-events: none;
 }
@@ -135,13 +115,13 @@ iframe {
   border-radius: 0 0 12px 12px;
 }
 
-/* Links */
-a {
+/* Links (but not buttons) */
+a:not(.btn) {
   color: #ee4e01;
   transition: color 0.2s ease;
 }
 
-a:hover {
+a:not(.btn):hover {
   color: #ec3900;
 }
 

@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global Brand Colors & Utilities */
+:root {
+  --orange-primary: #ee4e01;
+  --orange-dark: #ec3900;
+  --dark-bg: #1a1a1a;
+  --dark-bg-light: #2d2d2d;
+}
+
+.text-orange {
+  color: var(--orange-primary);
+}
+
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Shared Button Styles */
+.btn-orange {
+  background-color: var(--orange-primary);
+  border-color: var(--orange-primary);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: var(--orange-dark);
+  border-color: var(--orange-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
+}
+
+.btn-orange:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-outline-primary {
+  color: var(--orange-primary);
+  border-color: var(--orange-primary);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #ffffff;
+  background-color: var(--orange-primary);
+  border-color: var(--orange-primary);
+  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Section Accent */
+.section-accent {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+  border-radius: 2px;
+}
+
+/* Shared Service/Card Styles */
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-primary);
+  transition: all 0.3s ease;
+}

@@ -13,14 +13,14 @@ export class Projekt {
   projects = [
     {
       folder: 'altan',
-      title: 'Altaner och Utomhusbyggen',
+      title: 'Altan och Uterums byggen',
       description: 'Skräddarsydda altaner och trädäck för utomhusbruk.',
       // exact filenames found in src/assets/images/altan
       images: [ "9.jpg", '449.jpg', '450.jpg', '451.jpg', '452.jpg', '453.jpg', '454.jpg', '455.jpg', '456.jpg', '457.jpg', '458.jpg', '459.jpg', "5.jpg", "7.jpg", "8.jpg"],
     },
     { 
       folder: 'utehus', 
-      title: 'Utehus och Förråd', 
+      title: 'Uterum och Förråd', 
       description: 'Funktionella förråd och utehus för förvaring.', 
       images: ["446.jpg", "447.jpg", "448.jpg", "4.jpg"] 
     },

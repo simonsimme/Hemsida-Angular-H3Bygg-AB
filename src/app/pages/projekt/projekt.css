@@ -37,10 +37,15 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
 }
 /* CTA Section */
+
+/* 
 .cta-section {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  position: relative;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .cta-section::before {
@@ -52,7 +57,7 @@
   bottom: 0;
   background: linear-gradient(135deg, rgba(238, 78, 1, 0.1) 0%, rgba(236, 57, 0, 0.1) 100%);
   pointer-events: none;
-}
+} */
 
 .text-white {
   color: #ffffff !important;
@@ -190,21 +195,4 @@
   .project-thumb {
     height: 200px;
   }
-}
-
-/* Button Styles */
-.btn-orange {
-  background-color: #ee4e01;
-  border-color: #ee4e01;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-orange:hover {
-  background-color: #ec3900;
-  border-color: #ec3900;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
 }
