@@ -32,6 +32,24 @@ app.use(
     maxAge: '1y',
     index: false,
     redirect: false,
+    setHeaders: (res, path) => {
+      // Cache static assets for 1 year
+      if (path.endsWith('.js') || path.endsWith('.css')) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+      // Cache images for 1 year
+      else if (path.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+      // Cache fonts for 1 year
+      else if (path.match(/\.(woff|woff2|ttf|eot)$/)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+      // Cache PDFs for 1 month
+      else if (path.endsWith('.pdf')) {
+        res.setHeader('Cache-Control', 'public, max-age=2592000');
+      }
+    },
   }),
 );
 

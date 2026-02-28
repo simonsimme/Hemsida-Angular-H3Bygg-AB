@@ -26,6 +26,12 @@
   text-align: center;
 }
 
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -101,14 +107,7 @@
   .service-card { padding: 1.5rem; }
 }
 
-/* Google Reviews Section */
-.google-rating-badge {
-  display: inline-block;
-  padding: 1.5rem 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+
 
 .rating-stars,
 .review-stars {
@@ -116,52 +115,80 @@
   gap: 0.25rem;
 }
 
-.rating-stars { justify-content: center; }
-
+/* Review Cards */
 .review-card {
   background: white;
-  padding: 2rem;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
 }
 
 .review-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--orange-primary);
 }
 
-.review-text {
-  font-style: italic;
-  color: #495057;
-  line-height: 1.6;
-  flex-grow: 1;
-}
-
-.review-author {
+.review-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  gap: 0.75rem;
 }
 
-.author-avatar {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
-  color: white;
+.review-avatar {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  flex-shrink: 0;
 }
+
+.review-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-avatar-fallback {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.review-author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-date {
+  font-size: 0.75rem;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.text-orange {
+  color: var(--orange-primary);
+}
+
+.spinner-border.text-orange {
+  color: var(--orange-primary) !important;
+}
+
+
 
 /* Digital Clock Styles */
 .digital-clock-bg {
@@ -196,14 +223,7 @@
   backdrop-filter: blur(10px);
 }
 
-.digital-segment::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 -100%;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(238, 78, 1, 0.1), transparent);
-  transition: left 0.5s ease;
-}
+
 
 .digital-segment:hover {
   border-color: rgba(238, 78, 1, 0.6);
@@ -211,7 +231,6 @@
   box-shadow: 0 10px 30px rgba(238, 78, 1, 0.2);
 }
 
-.digital-segment:hover::before { left: 100%; }
 
 .digital-value {
   font: 700 3rem 'Courier New', monospace;
@@ -229,7 +248,6 @@
   text-transform: uppercase;
 }
 
-.digital-segment.pulsing { animation: pulse 1s ease-in-out infinite; }
 
 @keyframes pulse {
   50% {

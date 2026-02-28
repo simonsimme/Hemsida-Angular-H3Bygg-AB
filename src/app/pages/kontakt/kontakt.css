@@ -1,15 +1,4 @@
-/* Page Styling */
-.Gray {
-  background-color: #686664;
-}
 
-.Orange {
-  background-color: #ee4e01;
-}
-
-.DOrange {
-  background-color: #ec3900;
-}
 
 /* Page Header */
 .page-header {
@@ -139,27 +128,6 @@ iframe {
   border-radius: 0 0 12px 12px;
 }
 
-/* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(238, 78, 1, 0.1) 0%, rgba(236, 57, 0, 0.1) 100%);
-  pointer-events: none;
-}
-
-.text-white-90 {
-  color: rgba(255, 255, 255, 0.9);
-}
 
 /* Contact Form */
 .form-label {
